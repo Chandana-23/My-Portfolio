@@ -1,0 +1,240 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" type="text/css">
+    <title>Chandana Samineni</title>
+</head>
+<body>
+    <div class="container p-5 w-100 d-block text-center banner">
+        <div class="intro pt-5">
+            <h1>I AM <br/> CHANDANA SAMINENI</h1>
+            <h1><span class="job">WEB DEVELOPER</span></h1>
+            <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, ipsum deserunt. Enim labore, nulla ducimus rem nostrum omnis commodi quae quod neque a necessitatibus deleniti ab harum minus sunt beatae!</blockquote>
+        </div>
+        <div class="container pt-5 d-flex justify-content-center">
+            <a href='https://twitter.com/ChandanaSaminen'><i class="p-2 fab fa-twitter-square fa-3x"></i></a>
+            <a href='https://github.com/Chandana-23'><i class="p-2 fab fa-github-square fa-3x"></i></a>
+            <a href='https://www.linkedin.com/in/chandana-samineni-556383195/'><i class="p-2 fab fa-linkedin fa-3x"></i></a>
+            <a href='https://www.facebook.com/chandanachoudarysamineni/'><i class="p-2 fab fa-facebook-square fa-3x"></i></a>
+            <a href='https://www.instagram.com/__chandana_samineni__/'><i class="p-2 fab fa-instagram-square fa-3x"></i></a>
+            <a href='mailto:chandanasamineni23@fmail.com'><i class="p-2 fab fa-google-plus-square fa-3x"></i></a>
+        </div>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Chandana Samineni</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Chandana Samineni</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonial">TESTIMONIALS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- About -->
+      <div class="container p-3" id="about">
+          <div class="container p-2 d-block text-center">
+            <h1>Who Am I</h1>
+            <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, impedit.</blockquote>
+          </div>
+          <div class="container p-2">
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-12 col-lg-12 col-xl-6 col-md-12 col-12 p-3">
+                    <img class="img img-thumbnail w-100" src="https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557571__340.jpg"  alt="Laptop and a girl">
+                </div>
+                <div class="col-lg-12 col-xl-6 col-sm-12 col-md-12 col-12 p-3">
+                    <h3 class="text-center">I'm a tech enthuastic</h3>
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, cum ab recusandae minus similique atque harum a tenetur! Veritatis officiis saepe necessitatibus qui, quo ratione nobis atque nemo quaerat debitis.</blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, laborum!</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+      </div>
+      <!-- Skills -->
+      <div class="container p-3 d-block text-center" id="skills">
+          <h1>Skills</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, harum.</p>
+          <ul class="nav d-flex justify-content-center nav-pills">
+            {% for i in skills %}
+              <li class="nav-link active m-2"> {{i.skills}} </li>
+            {% endfor %}
+          </ul>          
+      </div>
+      <!-- Projects -->
+      <div class="container projects p-2 d-block text-center" id="projects">
+        <h1>Projects</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, sapiente.</p>
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+        {% for i in projects %}
+            <div class="col-12 project col-sm-6 col-md-3">
+              <h4>{{i.project_name}} </h4>
+              <p>{{i.project_desc}} </p>
+            </div>
+        {% endfor %}
+          </div>
+        </div>
+      </div>
+
+<!-- Testimonial -->
+<section class="text-center container p-3" id="testimonial">
+  <div class="d-flex justify-content-center">
+    <h2 class=" font-weight-bold m-2">Testimonials</h2>
+    <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add Testimonial</button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Testimonial</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post" action="add" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="mb-3">
+                <input type="text" class="form-control" id="recipient-name" name="name" placeholder="Full Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="info" name="info" placeholder="Designation" required>
+              </div>
+              <div class="mb-3">
+                <input type="file" accept="image/*" class="form-control" name="image" id="recipient-img" required>
+              </div>
+              <div class="mb-3">
+                <textarea name="desc" class="form-control" id="message-text" placeholder="Description" required></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Submit"/>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if testimonial %}
+  <div class="wrapper-carousel-fix">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner p-2" role="listbox">
+        {% for i in testimonial %}
+        {% if forloop.counter == 1 %}
+        <div class="carousel-item active">
+          <div class="testimonial">
+            <div class="avatar mx-auto mb-4">
+              <img src="{{i.pic.url}}" class="rounded-circle img-fluid" height="200" width="200"
+                alt="{{i.name}}">
+            </div>
+            <h4 class="font-weight-bold">{{i.name}}</h4>
+            <h6 class="font-weight-bold my-3">{{i.info}}</h6>
+            <p>
+              <i class="fas fa-quote-left"></i> {{i.desc}}
+            </p>
+            
+          </div>
+        </div>
+        {% else %}
+        <div class="carousel-item">
+          <div class="testimonial">
+            <div class="avatar mx-auto mb-4">
+              <img width="200" src="{{i.pic.url}}" class="rounded-circle img-fluid"
+                alt="{{i.name}}">
+            </div>
+            <h4 class="font-weight-bold">{{i.name}}</h4>
+            <p>
+              <i class="fas fa-quote-left"></i> {{i.desc}}
+            </p>
+            <h6 class="font-weight-bold my-3">{{i.info}}</h6>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  {% else %}
+  <h5>Not available</h5>
+  {% endif %}
+</section>
+<!-- Contact -->
+<div class="container p-3" id="contact">
+  <h1 class="text-center">Get In Touch</h1>
+  <div class="row p-2">
+    <div class="col-12 col-sm-12 col-md-6 col-xl-6">
+      <h4>Chandana Samineni</h4>
+      <p>Address: 3-216/1 RNR Colony, Beside ramalayam, Chilkur, Suryapet, Telangana</p>
+      <p>Call me: +9193463 16863</p>
+      <p>Mail me: chandanasamineni23@gmail.com</p>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-xl-6">
+      <form action="query" align="center" method="post">
+        {% csrf_token %}
+        <h5>For any queries</h5>
+        <input type="text" placeholder="Full Name" name="name" class="p-2 m-2 form-control" required>
+        <input type="email" placeholder="Email" name="email" class="p-2 m-2 form-control" required>
+        <textarea name="message" cols="30" rows="10" placeholder="Message" class="p-2 m-2 form-control" required></textarea>
+        <input class="p-2 m-2 btn btn-warning" type="submit" value="Submit Query">
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <hr>
+  <p class="text-white bg-black text-center">Copyright &copy; 2022 by Chandana Samineni</p>
+</div>
+
+</body>
+</html>
