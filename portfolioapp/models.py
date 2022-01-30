@@ -11,7 +11,7 @@ class Projects(models.Model):
 
 class Testimonial(models.Model):
     name = models.CharField(max_length=150)
-    pic = models.ImageField(upload_to='media/')
+    pic = models.ImageField(upload_to='media')
     desc = models.TextField()
     info = models.TextField()
 
