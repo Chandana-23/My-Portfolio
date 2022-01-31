@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)#*8p+9h$pil#q7(%7ee$p-t-+1tc7o03+tjgx-zpbfy5oba#i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000','chandana-portfolio.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','chandana-portfolio.herokuapp.com']
 
 
 # Application definition
@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd5jlm3vtb3dgc1',
-        'USER': 'zjhpeiamztpelo',
-        'PASSWORD': '91ecfeaf24c27e731ef12476ed3594f20ce51571f71ee0e0e2fc8c58e040be2e',
-        'HOST': 'ec2-184-73-243-101.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -124,10 +120,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'assets')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
